@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet & Varnish | Nail Studio</title>
+    <!-- External CSS stylesheet -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">   
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="site-body">
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" onclick="switchTab('home')" class="logo">VELVET & VARNISH</a>
+            
+            <!-- Desktop Nav -->
+            <nav class="desktop-nav">
+                <button onclick="switchTab('home')" class="nav-link active" data-target="home">Home</button>
+                <button onclick="switchTab('services')" class="nav-link" data-target="services">Services</button>
+                <button onclick="switchTab('gallery')" class="nav-link" data-target="gallery">Gallery</button>
+                <button onclick="switchTab('contact')" class="nav-link" data-target="contact">Contact</button>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-primary">Instagram</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="mobile-toggle" aria-label="Toggle navigation">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <button onclick="switchTab('home'); toggleMobileMenu();">Home</button>
+            <button onclick="switchTab('services'); toggleMobileMenu();">Services</button>
+            <button onclick="switchTab('gallery'); toggleMobileMenu();">Gallery</button>
+            <button onclick="switchTab('contact'); toggleMobileMenu();">Contact</button>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-primary">Instagram</a>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-content">
+
+        <!-- ================= HOME PAGE ================= -->
+        <section id="page-home" class="page-section">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h1 class="hero-title">Minimalist Luxury Nail Care</h1>
+                    <p class="hero-description">
+                        Experience clean, modern manicures tailored to your style. Designed with care in a calm, welcoming studio space.
+                    </p>
+                    <div class="button-group">
+                        <button onclick="switchTab('services')" class="btn-primary">View Services</button>
+                        <button onclick="switchTab('contact')" class="btn-outline">Location</button>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <!-- IMAGE 1 -->
+                    <img id="image-1" src="spabielenda-beautician-5529805_1920.jpg" alt="Nail Salon Hero" class="site-image hero-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SERVICES PAGE ================= -->
+        <section id="page-services" class="page-section hidden">
+            <div class="section-header">
+                <h2>Services & Pricing</h2>
+                <p>Transparent pricing for premium treatments.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="card">
+                    <div>
+                        <h3>Classic Manicure</h3>
+                        <p>Shaping of nails, care of cuticles, a relaxing hand massage, and manicure with polish.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span>45 mins</span>
+                        <span class="price">$35</span>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="card">
+                    <div>
+                        <h3>Gel Polish / UV</h3>
+                        <p>Gel overlay on natural nails, which is long wearing, UV cured, with complete preparation included.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span>60 mins</span>
+                        <span class="price">$50</span>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="card">
+                    <div>
+                        <h3>Nail Art & Extras</h3>
+                        <p>Personalized minimalist design, French manicures, chrome finishes, or simply removing the gel gently.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span>15-30 mins</span>
+                        <span class="price">from $10</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IMAGE 2 -->
+            <div class="image-banner">
+                <img id="image-2" src="pexels-gabrielpuyen-6135681.jpg" alt="Services Detail" class="site-image banner-img">
+            </div>
+        </section>
+
+        <!-- ================= GALLERY PAGE ================= -->
+        <section id="page-gallery" class="page-section hidden">
+            <div class="section-header">
+                <h2>Selected Work</h2>
+                <p>An examination of current studio sets and impeccable finishes.</p>
+            </div>
+
+            <!-- IMAGE 3 -->
+            <div class="gallery-wrapper">
+                <img id="image-3" src="pexels-maxi-leiva-288925580-18112333.jpg" alt="Gallery Showcase" class="site-image gallery-img">
+            </div>
+
+            <div class="text-center">
+                <p class="subtext">Find more daily work directly on our <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram account</a>.</p>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT PAGE ================= -->
+        <section id="page-contact" class="page-section hidden">
+            <div class="section-header">
+                <h2>Contact us</h2>
+                <p>Drop by or reach us online.</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-row">
+                    <span class="contact-label">Working Hours</span>
+                    <span class="contact-value">Mon – Sat: 10:00am – 19:00pm</span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-label">Location</span>
+                    <span class="contact-value">Street name, city name</span>
+                </div>
+                <div class="contact-row border-0">
+                    <span class="contact-label">Socials</span>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm"><i class="fa-brands fa-instagram"></i>Our Instagram</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+
+    <!-- Interactive Navigation JavaScript -->
+    <script>
+        function switchTab(targetTab) {
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById('page-' + targetTab).classList.remove('hidden');
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if(link.getAttribute('data-target') === targetTab) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
